@@ -104,7 +104,7 @@ const Movies = () => {
             <div className="row">
               <div className="movies__header">
                 <h1 className="section__title">All Movies</h1>
-                <form onSubmit="" style={{ display: 'flex', gap: 8 }}>
+                <form onSubmit={(e) => { e.preventDefault(); if (query) search(query, 1, false); else { setMovies([]); setSearchParams({}); } }} className="movies__search" style={{ display: 'flex', gap: 8 }}>
                   <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search movies by title" />
                   <button className="btn">Search</button>
                 </form>

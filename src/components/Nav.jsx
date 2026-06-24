@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({ numberOfItems }) => {
     function openMenu() {
-        document.body.classList += "menu--open";
+        document.body.classList.add("menu--open");
     }
     function closeMenu() {
         document.body.classList.remove("menu--open");
@@ -16,15 +16,15 @@ const Nav = ({ numberOfItems }) => {
         return (
         <nav>
             <div className="nav__container">
-                <Link to="">
+                <Link to="/" onClick={closeMenu}>
                     <img src="" alt="" className="logo" />
                 </Link>
                 <ul className="nav__links">
                     <li className="nav__list"> 
-                        <Link to="/" className="nav__link">Home</Link>
+                        <Link to="/" className="nav__link" onClick={closeMenu}>Home</Link>
                     </li>
                     <li className="nav__list">
-                        <Link to="/movies" className="nav__link">Movies</Link>
+                        <Link to="/movies" className="nav__link" onClick={closeMenu}>Movies</Link>
                     </li>
                     <button className="btn__menu" onClick={openMenu}>
                         <FontAwesomeIcon icon="bars" />
@@ -37,10 +37,10 @@ const Nav = ({ numberOfItems }) => {
                     </button>
                     <ul className="menu__links">
                         <li className="menu__list"> 
-                            <Link to="" className="menu__link">Home</Link>
+                            <Link to="/" className="menu__link" onClick={closeMenu}>Home</Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="" className="menu__link">Movies</Link>
+                            <Link to="/movies" className="menu__link" onClick={closeMenu}>Movies</Link>
                         </li>
                         
                     </ul>

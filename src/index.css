@@ -104,6 +104,12 @@ button:active {
   margin: 0 auto;
 }
 
+.nav__links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 .nav__link {
   text-decoration: none;
   font-size: 20px;
@@ -401,8 +407,8 @@ FEATURES
 }
 
 .movie__plot {
-  
-
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .movie__title--skeleton {
@@ -815,6 +821,48 @@ select {
   .movie__selected--description {
     width: 100%;
   }
+}
+
+/* Movies header responsiveness */
+@media (max-width: 900px) {
+  .movies__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .movies__header .section__title {
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+  }
+  .movies__search {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+  }
+  .movies__search input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+  }
+  .movies__search .btn {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .movies__header .section__title {
+    font-size: 22px;
+  }
+  .nav__container .logo {
+    width: 120px;
+  }
+  /* keep menu icon to the right */
+  .nav__links { width: auto; }
+  .nav__links .btn__menu { margin-left: 12px; }
 }
 
 
