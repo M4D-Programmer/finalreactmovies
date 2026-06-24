@@ -1,0 +1,8 @@
+When on the movies tab we need random movies to pop up at the bottom so the user has some to look at.
+The search functionality should refresh after each key is pressed so the user gets live results.
+When clicking the back button in the browser from the movieinfo page, the search refreshes to search for nothing, we need to users to go straight back to their search so they can resume scrolling.
+When searching, there are blank spaces that don't ever seem to load, if the movie fails to load within 0.6s remove and replace it so the user can see all the options and not have to guess what the blank one is.
+Remove the cart from the Nav.
+When on the movieinfo page, the image of each movie looks funky. Lets stabilize it to be one size that looks good for all images.
+Show more movies on the Home page where it says Featured movies.
+Change the color from purple to blue. (index.css)
